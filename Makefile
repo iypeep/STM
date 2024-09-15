@@ -39,20 +39,44 @@ C_SOURCES =  \
 Core/Src/main.c \
 Core/Src/stm32f1xx_it.c \
 Core/Src/stm32f1xx_hal_msp.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c \
-Core/Src/system_stm32f1xx.c  
+Core/Src/system_stm32f1xx.c  \
+Drivers\STM32F10x_StdPeriph_Driver\src\misc.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c \
+Drivers\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
+# Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c \
+
 
 # ASM sources
 ASM_SOURCES =  \
@@ -100,7 +124,7 @@ AS_DEFS =
 
 # C defines
 C_DEFS =  \
--DUSE_HAL_DRIVER \
+-DUSE_STDPERIPH_DRIVER \
 -DSTM32F103xB
 
 
@@ -110,13 +134,16 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -ICore/Inc \
--IDrivers/STM32F1xx_HAL_Driver/Inc \
--IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/STM32F10x_StdPeriph_Driver/inc\
 -IDrivers/CMSIS/Device/ST/STM32F10x \
 -IDrivers/CMSIS/Include\
+-IDrivers/CMSIS/Include\
+-IDrivers/STM32F10x_StdPeriph_Driver\
+-IDrivers/CMSIS/Include
 
+# -IDrivers/STM32F1xx_HAL_Driver/Inc \
+# -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
