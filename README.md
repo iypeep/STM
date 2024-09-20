@@ -13,4 +13,3 @@ b站教程  https://www.bilibili.com/video/BV1th411z7sn/?p=4  -  STM32入门教�
 
 <img width="263" alt="Snipaste_2024-09-16_14-12-40" src="https://github.com/user-attachments/assets/fdae8396-1acf-4d45-8db0-5a5621dab223">
 
-makefile和项目结构还有点混乱,现在还在第一个例程学习,后续应该能继续优化
