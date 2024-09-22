@@ -140,7 +140,9 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Include\
 -IDrivers/CMSIS/Include\
 -IDrivers/STM32F10x_StdPeriph_Driver\
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include\
+-ISystem\
+
 
 # -IDrivers/STM32F1xx_HAL_Driver/Inc \
 # -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \

@@ -5,7 +5,9 @@
   "srcDirs": [
     "Core",
     "Drivers",
-    "EIDE-gcc/src"
+    "EIDE-gcc/src",
+    "System",
+    "Hardware"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -87,7 +89,9 @@
           "EIDE-gcc/src",
           "Drivers/CMSIS/Device/ST/STM32F1xx/Include",
           "Drivers/STM32F10x_StdPeriph_Driver",
-          "Drivers/CMSIS/Include"
+          "Drivers/CMSIS/Include",
+          "System",
+          "Hardware"
         ],
         "libList": [],
         "defineList": [
